@@ -1,6 +1,0 @@
-{
-  "eslint.lintTask.enable": true,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "all",
-  "prettier.withNodeModules": true
-}
