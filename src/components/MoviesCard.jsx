@@ -109,32 +109,42 @@ const MoviesCard = () => {
                      key={movie.name}
                      style={{
                         display: 'flex',
-                        textAlign: 'center',
                         marginBottom: '20px',
-                        marginLeft: '25%',
-                        width: '50%',
-                        justifyContent: 'center',
+                        backgroundColor: '#f5f5f5',
+                        marginLeft: '30%',
+                        width: '40%',
+                        justifyContent: 'space-between',
                      }}
                   >
                      <CardContent>
                         <Typography
                            variant="h5"
-                           color="primary"
                            style={{
                               textTransform: 'capitalize',
-                              justifyContent: 'space-evenly',
+                              color: '#1a237e',
                            }}
                         >
-                           {movie.name} - {movie.rank}
-                           <IconButton
-                              edge="end"
-                              aria-label="delete"
-                              color="secondary"
-                              onClick={() => handleRemove(movie.name)}
-                           >
-                              <DeleteRoundedIcon />
-                           </IconButton>
+                           Name - {movie.name}
                         </Typography>
+                        <Typography
+                           variant="h5"
+                           style={{
+                              textTransform: 'capitalize',
+                              color: '#00bfa5',
+                           }}
+                        >
+                           Rank - {movie.rank}
+                        </Typography>
+                     </CardContent>
+                     <CardContent>
+                        <IconButton
+                           edge="end"
+                           aria-label="delete"
+                           color="secondary"
+                           onClick={() => handleRemove(movie.name)}
+                        >
+                           <DeleteRoundedIcon />
+                        </IconButton>
                      </CardContent>
                   </Card>
                ))}

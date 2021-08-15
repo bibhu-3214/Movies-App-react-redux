@@ -8,32 +8,37 @@ const MovieStats = () => {
 
    return (
       <Container>
-         <Typography variant="h3" gutterBottom align="center" color="primary">
-            Total Movies - ({movies.length})
-         </Typography>
-         <Typography
-            variant="h5"
-            gutterBottom
-            align="center"
-            style={{ color: 'seagreen' }}
-         >
-            Top Ranked Movies
+         <Typography variant="h4" gutterBottom color="primary">
+            Top Ranked Movies ({movies.length})
          </Typography>
          {statsArr
             .sort((a, b) => b.rank - a.rank)
             .map((movie) => (
-               <Card key={movie.name} style={{ marginBottom: '20px' }}>
+               <Card
+                  key={movie.name}
+                  style={{
+                     marginBottom: '20px',
+                     padding: '3%',
+                     backgroundColor: '#f5f5f5',
+                  }}
+               >
                   <Typography
                      variant="h5"
-                     align="center"
-                     color="secondary"
                      style={{
-                        margin: '10px',
-                        padding: '10px',
                         textTransform: 'capitalize',
+                        color: '#1a237e',
                      }}
                   >
-                     {movie.name} - {movie.rank}
+                     Name - {movie.name}
+                  </Typography>
+                  <Typography
+                     variant="h5"
+                     style={{
+                        textTransform: 'capitalize',
+                        color: '#00bfa5',
+                     }}
+                  >
+                     Rank - {movie.rank}
                   </Typography>
                </Card>
             ))}

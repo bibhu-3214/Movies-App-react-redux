@@ -36,8 +36,13 @@ const MoviesForm = () => {
 
    return (
       <>
-         <Typography variant="h3" gutterBottom align="center" color="primary">
-            Add Movies
+         <Typography
+            variant="h4"
+            gutterBottom
+            color="primary"
+            style={{ marginLeft: '10%', marginBottom: '10px' }}
+         >
+            Add Movies Here
          </Typography>
          <form
             onSubmit={handleSubmit}
@@ -79,11 +84,11 @@ const MoviesForm = () => {
             </FormControl>
             <Button
                type="submit"
-               size="large"
                variant="contained"
                color="primary"
+               style={{ width: '100%', padding: '12px' }}
             >
-               Submit
+               ADD
             </Button>
          </form>
       </>
